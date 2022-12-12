@@ -67,7 +67,7 @@ pub struct TransactionContext {
     #[cfg_attr(not(feature = "client"), allow(dead_code))]
     name: String,
     op: String,
-    trace_id: protocol::TraceId,
+    pub trace_id: protocol::TraceId,
     parent_span_id: Option<protocol::SpanId>,
     sampled: Option<bool>,
     custom: Option<CustomTransactionContext>,
